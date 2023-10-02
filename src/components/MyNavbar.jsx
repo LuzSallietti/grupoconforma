@@ -1,47 +1,73 @@
 import React from "react";
-import { Navbar, Dropdown, Button, Indicator, Badge } from "react-daisyui";
+import logo from "../assets/logo.png";
+import { Navbar, Dropdown, Button } from "react-daisyui";
 
 const MyNavbar = () => {
   return (
-  <>
-    <Navbar>
-      <Navbar.Start>
-        <Dropdown>
-          <Button tag="label" color="ghost" shape="circle" tabIndex={0}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-2 w-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-            </svg>
+    <>
+      <Navbar className="shadow-xl bg-base-100 mb-40 rounded-box lg:px-8">
+        <Navbar.Start>
+          <Dropdown>
+            <Button tag="label" color="ghost" shape="circle" tabIndex={0}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1rem"
+                height="1rem"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </Button>
+            <Dropdown.Menu className="menu-sm w-52 mt-3 z-[1]">
+              <Dropdown.Item>Homepage</Dropdown.Item>
+              <Dropdown.Item>Portfolio</Dropdown.Item>
+              <Dropdown.Item>About</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Navbar.Start>
+        <Navbar.Center className="justify-center">
+          <img
+            src={logo}
+            alt="Grupo Conforma"
+            className="w-16 h-auto p-4"
+          ></img>
+        </Navbar.Center>
+        <Navbar.End className="navbar-end">
+          <Button
+            tag="a"
+            size="sm"
+            animation="true"
+            className="uppercase btn-default text-xs tracking-wider"
+            startIcon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                />
+              </svg>
+            }
+          >
+            Contacto
           </Button>
-          <Dropdown.Menu className="menu-sm w-52 mt-3 z-[1]">
-            <Dropdown.Item>Homepage</Dropdown.Item>
-            <Dropdown.Item>Portfolio</Dropdown.Item>
-            <Dropdown.Item>About</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Navbar.Start>
-      <Navbar.Center>
-        <Button tag="a" color="ghost" className="normal-case text-xl">
-          daisyUI
-        </Button>
-      </Navbar.Center>
-      <Navbar.End className="navbar-end">
-        <Button color="ghost" shape="circle">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </Button>
-        <Button color="ghost" shape="circle">
-          <Indicator>
-            <Badge size="xs" color="primary" className={Indicator.Item.className()} />
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-          </Indicator>
-        </Button>
-      </Navbar.End>
-    </Navbar>
+        </Navbar.End>
+      </Navbar>
     </>
-  )
-}
+  );
+};
 
 export default MyNavbar;

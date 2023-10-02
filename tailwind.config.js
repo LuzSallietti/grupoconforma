@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
+  content: [   
+    './src/**/*.{html,js,jsx}',
     'node_modules/daisyui/dist/**/*.js',
     'node_modules/react-daisyui/dist/**/*.js',
   ],
@@ -9,7 +10,7 @@ export default {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ["light", "dark", "bumblebee"],
+    themes: ["bumblebee"],
   }
 }
 
