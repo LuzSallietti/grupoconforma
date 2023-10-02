@@ -5,7 +5,7 @@ import { Navbar, Dropdown, Button } from "react-daisyui";
 const MyNavbar = () => {
   return (
     <>
-      <Navbar className="shadow-xl bg-base-100 mb-40 rounded-box lg:px-8">
+      <Navbar className="shadow-xl bg-base-100 rounded-box mb-0 lg:px-8">
         <Navbar.Start>
           <Dropdown>
             <Button tag="label" color="ghost" shape="circle" tabIndex={0}>
